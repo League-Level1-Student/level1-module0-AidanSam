@@ -46,12 +46,7 @@ public class MyFirstSwingGUI {
 
 	}
 
-	public ImageIcon loadImage() {
-		try {
-			return new ImageIcon(ImageIO.read(new MyFirstSwingGUI().getClass().getResourceAsStream("java.png")));
-		} catch (IOException e) {
-			e.printStackTrace()
-			return null;
-		}
+	
+		
 	}
-}
+
