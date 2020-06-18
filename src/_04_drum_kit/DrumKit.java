@@ -22,7 +22,7 @@ public class DrumKit implements MouseListener {
 
 	private static final int EXIT_ON_CLOSE = 0;
 	JLabel drumLabelWithImage;
-
+//
 	public void run() throws MalformedURLException {
 
 		// 1. Make a JFrame variable and initialize it using "new JFrame()"
