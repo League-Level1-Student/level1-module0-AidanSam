@@ -22,6 +22,7 @@ public class DrumKit implements MouseListener {
 
 	private static final int EXIT_ON_CLOSE = 0;
 	JLabel drumLabelWithImage;
+	private JLabel cymbalLabelWithImage;
 //
 	public void run() throws MalformedURLException {
 
@@ -43,19 +44,25 @@ frame.add(panel);
 		// Eclipse project under "default package".
 
 		// 8. Put the name of your image file in a String variable.
-
+String drum = "Drum.jpg";
 		// 9. Edit the next line to use your String variable
-		// drumLabelWithImage = createLabelImage(drumImageString);
+	drumLabelWithImage = createLabelImage(drum);
 
 		// 10. Add the image to the panel
-
+panel.add(drumLabelWithImage);
 		// 11. Set the layout of the panel to "new GridLayout()"
-
+panel.setLayout(new GridLayout());
 		// 12. call the pack() method on the frame. Run your program. Do you see
 		// your drum image?
-
+frame.pack();
 		// 13. add this mouse listener to drumLabelWithImage
-
+drumLabelWithImage.addMouseListener(null);
+String cymbal = "cymbal.jpg"; 
+	cymbalLabelWithImage = createLabelImage(cymbal);
+	panel.add(cymbalLabelWithImage);
+	frame.pack();
+	cymbalLabelWithImage.addMouseListener(null);
+	
 		// 18. Add more images to make a drumkit. Remember to add this mouse
 		// listener to each one.
 
@@ -92,8 +99,9 @@ frame.add(panel);
 	}
 
 	private void playSound(String fileName) {
-		AudioClip sound = JApplet.newAudioClip(getClass().getResource(fileName));
-		sound.play();
+		//AudioClip sound = JApplet.newAudioClip(getClass().getResource(fileName));
+		//sound.play();
+		System.out.println(fileName);
 	}
 
 	@Override
