@@ -1,5 +1,6 @@
 package _09_sound_effects_machine;
 
+import java.applet.AudioClip;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -21,7 +22,9 @@ public class Sound implements ActionListener {
 	panel.setVisible(true);
 	frame.pack();
 	JButton dutton = new JButton();
+	dutton.setText("screm");
 	JButton button = new JButton();
+	button.setText("clap");
 	panel.add(dutton);
     panel.add(button);
     frame.pack();
@@ -31,6 +34,7 @@ public class Sound implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Scream");
 	}
 }
+	
